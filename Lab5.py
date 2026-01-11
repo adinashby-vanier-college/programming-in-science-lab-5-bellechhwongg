@@ -7,16 +7,27 @@
 
 
 def hollow_square(n):
+    # result = ""
+    # for i in range(n):
+    #     for j in range(n):
+    #          if i in range(1, n-1) and j in range(1, n-1):
+    #             result += " "
+    #          else:
+    #             result += "*"
+    #     result += "\n"
+
+    # return result.rstrip()      
     result = ""
     for i in range(n):
         for j in range(n):
-             if i in range(1, n-1) and j in range(1, n-1):
+            if i in range(1, n-1) and j in range(1, n-1):
                 result += " "
-             else:
+            else:
                 result += "*"
         result += "\n"
 
-    return result.rstrip()        
+    return result.rstrip()
+
 
 
 
@@ -25,14 +36,33 @@ def hollow_square(n):
 # 123
 # 1234
 def number_pattern(n):
+    # result = ""
+
+    # for i in range(1, n + 1):
+    #     for j in range(1, i + 1):
+    #         result += str(j)
+    #     result += "\n"
+        
+    # return result.rstrip()
+
+    count = 1
     result = ""
 
-    for i in range(1, n + 1):
-        for j in range(1, i + 1):
-            result += str(j)
+    while count <= n:
+        number = 1
+        while number <= count:
+            result += str(number)
+            number += 1
+
+        number = 1
         result += "\n"
-        
+    
     return result.rstrip()
+
+
+
+
+
 
 # Example: For n = 5, sum = 1 + 2 + 3 + 4 + 5 = 15
 def sum_of_natural_numbers(n):
